@@ -854,6 +854,14 @@ footer
         padding: 40px 40px;
     }
 
+    #header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
     #navbar{
         display: flex;
         flex-direction: column;
@@ -868,12 +876,13 @@ footer
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
         padding: 80px 0 0 10px;
         transition: 0.3s;
+        z-index: 1000;
     }
 
     #navbar.active{
         right: 0px;
-
     }
+    
     #navbar li{
         margin-bottom: 25px;
     }
@@ -882,49 +891,117 @@ footer
         display: flex;
         align-items: center;
     }
+    
     #mobile i{
         color: #1a1a1a;
         font-size: 24px;
         padding-left: 20px;
+        cursor: pointer;
     }
+    
     #close{
         display: initial;
         position: absolute;
         top: 30px;
         left: 30px;
         color: #222;
-        font-size: 24px; 
+        font-size: 24px;
+        cursor: pointer;
     }
+    
     #lg-bag {
         display: none;
     }
+    
+    h1 {
+        font-size: 38px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
     #hero {
-        height: 70vh;
-        padding: 0 70px;
+        height: 60vh;
+        padding: 0 40px;
         background-position: top 30% right 100%;
     }
+    
+    #hero button {
+        padding: 10px 40px 10px 50px;
+        font-size: 12px;
+    }
+    
     #feature {
-        justify-content: center;
+        justify-content: space-between;
     }
+    
     #feature .fe-box {
-        margin: 15px 15px;
+        width: 45%;
+        margin: 10px 5px;
+        padding: 15px 10px;
     }
+    
+    #feature .fe-box img {
+        width: 80px;
+    }
+    
+    #feature .fe-box h6 {
+        font-size: 11px;
+        padding: 5px 5px;
+    }
+    
     #product1 .pro-container{
-        justify-content: center;
+        justify-content: space-between;
     }
+    
     #product1 .pro{
-        margin: 15px;
+        width: 48%;
+        min-width: auto;
+        margin: 10px 0;
     }
-    #newletter{
-        width: 70%;
+    
+    #newsletter{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    #newsletter .form {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    #newsletter input {
+        padding: 0 10px;
     }
 
     /*contact Page*/
+    #contact-details {
+        flex-direction: column;
+    }
+    
+    #contact-details .details{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #contact-details .map{
+        width: 100%;
+        height: 300px;
+    }
+    
     #form-details{
-        padding: 40px;
+        padding: 30px 20px;
+        flex-direction: column;
     } 
+    
     #form-details form{
-        width: 50%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #form-details .people {
+        width: 100%;
     }
 }
 
@@ -939,124 +1016,390 @@ footer
     .section-p1{
         padding: 20px;
     }
+    
     #header {
-        padding: 10px 30px;
+        padding: 10px 15px;
     }
+    
+    .logo {
+        width: 80px;
+    }
+
     h1{
-        font-size: 38px;
-    }
-    h2 {
         font-size: 32px;
+        line-height: 48px;
     }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    h4 {
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
     #hero {
-        padding: 0 20px;
+        padding: 0 15px;
+        height: 50vh;
         background-position: 55%;
     }
+    
+    #hero h2 {
+        font-size: 20px;
+    }
+    
+    #hero h1 {
+        font-size: 26px;
+    }
+    
+    #hero button {
+        padding: 8px 30px 8px 40px;
+        font-size: 11px;
+    }
+    
     #feature{
         justify-content: space-between;
     }
+    
     #feature .fe-box{
-        width: 155px;
-        margin: 0 0 15px 0;
+        width: calc(50% - 10px);
+        margin: 5px;
+        padding: 10px;
     }
+    
+    #feature .fe-box img {
+        width: 60px;
+    }
+    
+    #feature .fe-box h6 {
+        font-size: 9px;
+        padding: 3px 3px;
+    }
+    
+    #product1 {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    #product1 h2 {
+        font-size: 20px;
+    }
+    
+    #product1 p {
+        font-size: 12px;
+    }
+    
+    #product1 .pro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     #product1 .pro{
         width: 100%;
+        min-width: auto;
+        margin: 10px 0;
     }
+    
     #newsletter {
-        padding: 40px 20px;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
     }
+    
+    #newsletter h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    #newsletter p {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    
     #newsletter .form {
         width: 100%;
+        flex-direction: column;
+    }
+    
+    #newsletter input{
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    #newsletter button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    
+    footer {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    footer .logo{
+        margin-bottom: 20px;
+    }
+    
+    footer h4 {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+    
+    footer p, footer a {
+        font-size: 11px;
+        margin-bottom: 5px;
     }
     
     footer .copyright {
         text-align: center;
+        font-size: 11px;
     }
 
-    footer p {
-        margin-bottom: 0;
-    }
-
-    
-    /* Single product */
+    /* Single product page */
     #prodetails  {
         display: flex;
         flex-direction: column;
-       
+        margin-top: 10px;
     }
+    
     #prodetails .sigle-pro-image{
         width: 100%;
         margin-right: 0px;
     }
+    
     #prodetails .single-pro-details{
         width: 100%;
+        padding-top: 15px;
+    }
+    
+    #prodetails .single-pro-details h2 {
+        font-size: 18px;
+    }
+    
+    #prodetails .single-pro-details h4 {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    
+    #prodetails .single-pro-details input{
+        width: 40px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .small-img-group{
+        flex-wrap: wrap;
     }
 
     /*blog page*/
     #blog{
-        padding: 100px 20px 0 20px;
+        padding: 50px 20px 0 20px;
     }
+    
+    #blog h2 {
+        font-size: 18px;
+    }
+    
     #blog .blog-box{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding-bottom: 30px;
     }
 
     #blog .blog-img{
         width: 100%;
         margin-right: 0px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    #blog img {
+        height: 200px;
     }
 
     #blog .blog-details{
         width: 100%;
+    }
+    
+    #blog .blog-details h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    #blog .blog-details p {
+        font-size: 12px;
+    }
+    
+    #blog .blog-details a {
+        font-size: 10px;
+    }
+    
+    #blog .blog-details a::after {
+        width: 30px;
+        right: -40px;
+    }
+
+    #blog .blog-box h1{
+        font-size: 40px;
+        top: -20px;
     }
 
     /*About page*/
     #about-head {
         flex-direction: column;
     }
+    
     #about-head img{
         width: 100%;
         margin-bottom: 20px;
+        max-height: 250px;
+        object-fit: cover;
     }
 
     #about-head div{
-        padding-left: 0px
+        padding-left: 0px;
     }
+    
+    #about-head h2 {
+        font-size: 18px;
+    }
+    
+    #about-head p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    #about-app {
+        padding: 20px;
+    }
+    
     #about-app .video{
         width: 100%;
+        margin: 15px auto 0 auto;
     }
 
     /* Contact Page*/
     #contact-details {
         flex-direction: column;
+        gap: 0;
     }
+    
     #contact-details .details{
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
+    
+    #contact-details .details h2 {
+        font-size: 18px;
+    }
+    
+    #contact-details .details h3 {
+        font-size: 14px;
+    }
+    
+    #contact-details .details li {
+        padding: 8px 0;
+    }
+    
+    #contact-details .details li i {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    
+    #contact-details .details li p {
+        font-size: 12px;
+    }
+    
     #contact-details .map{
         width: 100%;
+        height: 250px;
     }
+    
     #form-details {
         margin: 10px;
-        padding: 30px 10px;
+        padding: 15px;
         flex-wrap: wrap;
+        flex-direction: column;
     }
+    
     #form-details form{
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
+    
+    #form-details form h2 {
+        font-size: 16px;
+    }
+    
+    #form-details form input,
+    #form-details form textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    #form-details .people {
+        width: 100%;
+    }
+    
+    #form-details .people div{
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #form-details .people div img{
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #form-details .people div p {
+        font-size: 11px;
+    }
+    
     /*Cart Page*/
     #cart-add{
        flex-direction: column;
     }
+    
     #coupon{
         width: 100%;
+        margin-bottom: 20px;
     }
+    
+    #coupon input {
+        width: 100%;
+    }
+    
     #subtotal {
         width: 100%;
-        padding: 20px;
+        padding: 15px;
+    }
+    
+    #cart table{
+        font-size: 12px;
+    }
+    
+    #cart table img{
+        width: 50px;
+    }
+    
+    #cart table td {
+        padding: 5px !important;
     }
 } 
