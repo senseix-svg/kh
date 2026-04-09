@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaizu Shop</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <div class="nav container">
+      <!-- Logo -->
+      <a href="#" class="logo">Product</a>
+      <!-- Cart Icon -->
+      <div class="cart-icon" id="cart-icon">
+        <i class="ri-shopping-cart-2-line"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>  
+
+  <!-- Products -->
+  <div class="products container">
+    <!-- Product Card -->
+    <div class="product-card">
+      <img src="photo_2025-04-29_11-30-23.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">Pencil case</h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price">$3.8</h2>
+          <p>Code 173</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duplicate product cards (7 more) -->
+    <!-- You can loop this in JS later if desired -->
+    <!-- Just repeat the same structure as above -->
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="photo_2025-04-29_11-23-37.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">Pencil case</h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price">$3.8</h2>
+          <p>Code 068</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="photo_2025-04-28_23-05-26.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">stickers tape</h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price">$0.65 each</h2>
+          <p>Code 172</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat the same structure for the next 5 items -->
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="photo_2025-04-27_22-37-21.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">Claw clip - ដង្កៀប </h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price">$2 each</h2>
+          <p>Code 168</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <img src="photo_2025-04-27_15-57-32.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">Foldable storage basket </h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price"> Size 15cm = 1$ | 25.3cm = 1.99$ </h2>
+          <p>Details</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="photo_2025-04-27_16-03-42.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">Foldable storage basket</h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price">$1.99</h2>
+          <p> Can store stationary, cosmetics…</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <img src="photo_2025-04-27_13-56-51.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">sticker</h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price">$1.5</h2>
+          <p>80pcs</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src="photo_2025-04-27_12-23-09.jpg" alt="Product image" class="product-image" />
+      <h2 class="product-name">RosyPosy gel pen</h2>
+      <div class="product-info">
+        <div class="price-data">
+          <h2 class="product-price">1box 2.75$</h2>
+          <p>Code 163</p>
+        </div>
+        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="cart-model" id="cart-model">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button class="close-btn">X</button>
+    </div>
+    <ul id="cart-items">
+      <!-- Cart items will be inserted here -->
+    </ul>
+    <div class="cart-total">Total: $<span id="total-price">0</span></div>
+    <div class="checkout-btn">Checkout</div>
+  </div>
+
+
+  
+
+  <!-- Link to JS -->
+  <script src="main.js"></script>
+</body>
+</html>

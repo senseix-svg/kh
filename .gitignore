@@ -1,0 +1,26 @@
+# Large files
+Class Material/Cambridge_IGCSE_Core_and_Extended_Mathematics_Fifth_Edition_Ric.pdf
+Class Material/Cam_G7/Cambridge _Maths_LBgrade7.pdf
+*.iso
+*.dmg
+*.exe
+*.zip
+*.rar
+
+# Node modules
+node_modules/
+.npm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+~$*
+.~*
